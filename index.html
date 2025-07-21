@@ -21,7 +21,7 @@
             </nav>
         </header>
         <main>
-            <div class="home_page">
+            <div class="home_page"> <!-- get rid of some of these divs and replace with sections instead for more semantic html -->
                 <div class="responsive-box-big">
                     <div class="blob"></div>
                     <div class="logo">
@@ -69,22 +69,32 @@
                             <button type="button" class="explore-button">Explore Content</button>
                         </div>
                 </div>
-                <!-- 
-                CONTACT THE HOSTS
-                Hit Us Up Anytime
-                First & Last Name
-                Input Field [Placeholder]
-                Email Address
-                Input Field [Placeholder]
-                How'd You Hear About Us?
-                Radial Menu [Social Media, Web Search, Family/Friends, Other]
-                Subject
-                Input Field [Placeholder]
-                Message 
-                Input Field [Placeholder]
-
-                button -> Send Us A Message
-                 -->
+                <section class="container">
+                    <form action="/submit.php">
+                        <fieldset>
+                            <h2>Hit Us Up Anytime</h2>
+                            <legend>
+                                Contact The Hosts
+                            </legend>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="first-last-name" placeholder="Your first and last name..">
+                            <br>
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email" placeholder="Your email address...">
+                            <br>
+                            <label for="referral">How'd You Hear About Us?</label>
+                            <input type="radio" name="referral-source" id="referral" value="social-media"> Social Media
+                            <input type="radio" name="referral-source" id="referral" value="web"> Web Search
+                            <input type="radio" name="referral-source" id="referral" value="fam-friends"> Family / Friends
+                            <input type="radio" name="referral-source" id="referral" value="other"> Other
+                            <br>
+                            <label for="message">Message: </label>
+                            <textarea name="message" id="message">Write us a message!</textarea>
+                            <br>
+                            <button type="submit">Send Message</button>
+                        </fieldset>
+                    </form>
+                </section>
             </div>
         </main>
     </body>
