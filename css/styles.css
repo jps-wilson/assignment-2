@@ -1,8 +1,10 @@
 *,
 *:after,
 *:before {
-	box-sizing: border-box;
-} /* All elements will include padding and border in width and height calculations */
+	margin: 0;
+    box-sizing: border-box;
+    /* All elements will include padding and border in width and height calculations */
+} 
 
 :root {
 	--header-outer-height: 110px;
@@ -111,4 +113,13 @@ body {
     background-image: url('../imgs/Dark Mode.png');
     background-size: cover;
     background-position: center;
+    margin-bottom: 3rem;
   }
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  gap: 20px;
+}
+
