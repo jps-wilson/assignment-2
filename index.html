@@ -12,24 +12,25 @@
     <body>
         <header class="header-outer">
             <div class="header-inner responsive-wrapper">
-                <div class="grid-container">
                 <div class="header-logo">
                     <img src="imgs/Dark Mode.png" alt="A black and white logo with a graphic of a microphone and circular text that says A Dash'll Do Ya."/>
+                    <h1>A Dash'll Do Ya</h1>
                 </div>
                 <nav class="header-navigation">
-                        <a href="index.html">Home</a>
-                        <a href="blog.html">Blog</a>
-                        <a href="about.html">About</a>
-                        <a href="contact.html">Contact</a>
-                        <!-- <button>Menu</button>  trying to figure out how to make this work for mobile -->
+                    <input type="checkbox" id="menu-toggle" hidden>
+                    <label for="menu-toggle" class="menu-btn">Menu</label>
+                    <a href="index.html">Home</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
                 </nav>
             </div>
         </header>
         <!-- Content -->
         <main class="main">
             <div class="main-content responsive-wrapper">
-                <div class="blob"></div> 
                     <section class="welcome">
+                        <div class="blob"></div> 
                         <div class="grid-container">
                             <div class="hpage-title-text">
                                 <h4>WELCOME TO</h4>
@@ -47,10 +48,10 @@
                             </div>
                             <div class="hp-buttons">
                                 <button class="about-button" type="button">
-                                    About The Show
+                                    <a href="about.html">About The Show</a>
                                 </button>
                                 <button class="meet-button" type="button">
-                                    Meet The Hosts
+                                    <a href="blog.html">Meet The Hosts</a>
                                 </button>
                             </div>
                         </div>
