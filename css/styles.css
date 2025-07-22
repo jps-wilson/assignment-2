@@ -20,9 +20,11 @@ body {
     font-family: "DM Sans", sans-serif;
     background-color: #f2f5f7;
     line-height: 1.5;
-    min-height: 300vh;
+    min-height: 100vh;
     position: relative;
 }
+
+/* Header and Nav Styling */
 
 .responsive-wrapper {
     width: 90%;
@@ -54,15 +56,33 @@ body {
 }
 
 /* Styling of other elements */
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* space between logo and h1 */
+}
+
 .header-logo img {
 	display: block;
 	height: calc(var(--header-inner-height) - 30px);
+    border-radius: 10px;
+}
+
+.header-logo h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    color: #222;
 }
 
 .header-navigation {
 	display: flex;
 	flex-wrap: wrap;
-    margin-left: auto;
+  margin-left: auto;
+  align-items: center;
+  background: none;
+  padding: 0;
+  position: relative;
 }
 
 .header-navigation a,
@@ -78,7 +98,14 @@ body {
 	display: none;
 	font-size: 1.125rem;
 	color: inherit;
+    margin-left: 1.75rem;
 	text-decoration: none;
+    position: relative;
+    font-weight: 500;
+    background: none;
+    padding: 0.5em 0;
+    border-radius: 4px;
+    transition: background 0.2s;
 }
 
 .header-navigation button {
@@ -107,57 +134,7 @@ body {
 }
 
 .main {
-	margin-top: 3rem;
-}
-
-.welcome {
-	width: 100%;
-	max-width: 900px;
-	border-radius: 8px;
-	box-shadow: 0 15px 30px 0 rgba(0,0,0, 0.1);
-	background-color: #fff;
-	padding: 2.5rem;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 2rem;
-	font-size: 1.125rem;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-}
-
-.welcome h2 {
-	font-size: 1.5rem;
-	font-weight: 700;
-	line-height: 1.25;
-}
-
-.about-button, .meet-button {
-    display: inline-block;
-    padding: 0.75em 1.5em;
-    background: #e2d0cb;
-    color: #222;
-    border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    text-decoration: none;
-    cursor: pointer;
-    font-weight: 500;
-    transition: background 0.2s;
-    margin-top: 2rem;
-    
-}
-.about-button:hover, .meet-button:hover {
-    background: #A88274;
-    text-decoration: underline;
-}
-
-.about-button a,
-.meet-button a,
-.button a {
-    border-radius: 20px;
-    text-decoration: none;
-    color: black;
+	margin-top: 4rem;
 }
 
 .blob {
@@ -170,17 +147,221 @@ body {
     margin-bottom: 3rem;
   }
 
+.welcome {
+	width: 100%;
+	max-width: 900px;
+	border-radius: 8px;
+	box-shadow: 0 15px 30px 0 rgba(0,0,0, 0.1);
+	background-color: #fff;
+	padding: 2.5rem;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 2rem;
+	font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.welcome h2 {
+	font-size: 2.5rem;
+	font-weight: 700;
+	line-height: 1.25;
+}
+.welcome h4 {
+	font-weight: 700;
+	line-height: 1.25;
+}
+.welcome h3 {
+	font-weight: 600;
+	line-height: 1.25;
+}
+.welcome p {
+  text-align: left;
+}
+
+.about-button, .meet-button, .submit-btn {
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    background: #e2d0cb;
+    color: #222;
+    border: none;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+    margin-top: 1.5rem;
+    border: 0.3rem solid transparent;
+    border-radius: 3rem;
+    
+    
+}
+.about-button:hover, .meet-button:hover, .submit-btn:hover {
+    background: #A88274;
+    text-decoration: underline;
+    transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
+    transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+    
+}
+
+.about-button a,
+.meet-button a,
+.button a {
+    border-radius: 20px;
+    text-decoration: none;
+    color: black;
+    transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
+}
+
+.about-button::after,
+.meet-button::after,
+.submit-btn::after {
+    content: '';
+    display: inline-block;
+    margin-left: 0.5em;
+    transition: opacity 0.2s, transform 0.2s;
+    opacity: 0;
+    transform: translateX(-5px);
+    /* Arrow style */
+    border: solid #222;
+    border-width: 0 3px 3px 0;
+    padding: 3px;
+    transform: rotate(-45deg) scale(0.8) translateX(-5px);
+}
+
+.about-button:hover::after,
+.meet-button:hover::after,
+.submit-btn:hover::after {
+    content: '';
+    opacity: 1;
+    transform: rotate(-45deg) scale(1) translateX(0);
+}
+
+/* Why You Should Listen */
+.why-you-should-listen h2, p {
+    text-align: center;
+}
+
+.why-you-should-listen h5 {
+    text-align: center;
+    margin-top: 4rem;
+}
+/* Dive Deeper */
+.dive-deeper h5 {
+    text-align: center;
+    margin-top: 2rem;
+}
+.dive-deeper h2 {
+    text-align: center;
+}
+
+/* Form Styling */
+.contact-form {
+    margin-top: 2rem;
+}
+
+.contact-form h5, .contact-form h2 {
+    text-align: center;
+}
+
+/* Style the label to display next to the inputs */
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+/* Style the submit button */
+.submit-btn {
+  padding-bottom: 14px;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+
+
+
+footer {
+    background: #373737;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 0.5rem;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    
+}
+
+/* Media Queries */
+
 @media (max-width: 800px) {
-	.header-navigation a {
-		display: none;
-	}
+    .header-navigation {
+        flex-direction: column;
+        align-items: flex-start;
+        background: #fff;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 80vw;
+        max-width: 320px;
+        z-index: 200;
+    }
+
+
+    .header-navigation a {
+        display: none;
+        width: 100%;
+        padding: 0.75rem 1em;
+        margin: 0.25em 0;
+        border-radius: 4px;
+        background: #f2f5f7;
+        color: #222;
+        font-size: 1.125rem;
+        box-shadow: none;
+        text-align: left;
+        transition: background 0.2s;
+    }
     #menu-toggle:checked ~ a {
         display: block;
-        margin-left: 0;
-        margin-top: 1rem;
     }
-	.menu-btn {
-		display: inline-block;
+    .menu-btn {
+        display: inline-block;
         cursor: pointer;
         font-size: 1.125rem;
         background: none;
@@ -188,7 +369,49 @@ body {
         color: inherit;
         margin-left: 1.75rem;
         font-weight: 500;
-	}
+        position: relative;
+    }
+}
+
+/* Desktop styles: show links, hide menu button */
+@media (min-width: 801px) {
+  .header-navigation a {
+    display: inline-block;
+  }
+  .menu-btn {
+    display: none;
+  }
+}
+
+/* Mobile styles: hide links, show menu button */
+@media (max-width: 800px) {
+  .header-navigation a {
+    display: none;
+    width: 100%;
+    padding: 0.75rem 1em;
+    margin: 0.25em 0;
+    border-radius: 4px;
+    background: #f2f5f7;
+    color: #222;
+    font-size: 1.125rem;
+    box-shadow: none;
+    text-align: left;
+    transition: background 0.2s;
+  }
+  #menu-toggle:checked ~ a {
+    display: block;
+  }
+  .menu-btn {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1.125rem;
+    background: none;
+    border: none;
+    color: inherit;
+    margin-left: 1.75rem;
+    font-weight: 500;
+    position: relative;
+  }
 }
 
 @media (max-width: 700px) {
