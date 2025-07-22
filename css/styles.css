@@ -103,3 +103,12 @@ body {
 		display: inline-block;
 	}
 }
+
+.blob {
+    width: clamp(100px, min(50dvh, 50dvw), 500px);
+    aspect-ratio: 1;
+    border-radius: 100% 30% 60% 70% / 50% 40% 70% 70%;
+    background-image: url('../imgs/Dark Mode.png');
+    background-size: cover;
+    background-position: center;
+  }
