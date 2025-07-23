@@ -128,7 +128,7 @@ html {
 
 /* Styling for the hero banner */
 .hero-section {
-  background: url(../imgs/contact-us.png);
+  background: url(../imgs/contact-us.png); /* Try to find a better image for this */
   height: 60vh;
   width: 100%;
   aspect-ratio: 16 / 9;
