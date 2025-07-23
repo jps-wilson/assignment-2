@@ -128,7 +128,7 @@ html {
 
 /* Styling for the hero banner */
 .hero-section {
-  background: url(/imgs/contact-us.png);
+  background: url(../imgs/contact-us.png);
   height: 80vh;
   width: 100%;
   background-size: cover;
