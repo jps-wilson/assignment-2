@@ -10,22 +10,8 @@ body, html {
   background-position: center;
   background-size: cover;
   position: relative;
-  color: white;
-  font-size: 25px;
-}
-
-/* Position text in the top-left corner */
-.topleft {
-  position: absolute;
-  top: 0;
-  left: 16px;
-}
-
-/* Position text in the bottom-left corner */
-.bottomleft {
-  position: absolute;
-  bottom: 0;
-  left: 16px;
+  color: bisque;
+  font-size: 2em;
 }
 
 /* Position text in the middle */
