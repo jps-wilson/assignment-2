@@ -126,13 +126,88 @@ html {
 	left: 0;
 }
 
+/* Styling for the hero banner */
+.hero-section {
+  background: url(/imgs/a\ dash’ll\ do\ ya\ banner.png);
+  height: 60vh;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero-section .hero-section-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #EAE6E0;
+  font-size: clamp(1.5rem, 4.5vw, 3.5rem);
+  text-align: center;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black */
+  box-shadow: 0 4px 8px rgba(72, 72, 72, 0.5); /* "Lifts" it off the image */
+  
+}
+
+/* Styling for the blog post */
+.blog-post {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: sans-serif;
+  color: #1c1c1c;
+}
+
+.blog-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.post-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0;
+}
+
+.post-subtitle {
+  font-size: 1rem;
+  color: #777;
+}
+
+.post-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.post-content {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.post-content p {
+  margin-bottom: 1.5rem;
+}
 
 /* Styling the Footer */
 footer {
     background: #373737;
     color: #fff;
     text-align: center;
-    padding: 1.5rem 0;
+    padding: 2.5rem 0;
 }
 
 .footer-links {
