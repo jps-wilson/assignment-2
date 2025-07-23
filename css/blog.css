@@ -141,11 +141,11 @@ html {
   justify-content: center;
 }
 
-.hero-section .hero-section-text {
+.hero-section .hero-section-text { /* This will need to be tweaked to work better */
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -400%); /* Adjusts where the text in the hero banner is */
+  transform: translate(-50%, -230%); /* Adjusts where the text in the hero banner is */
   color: #EAE6E0;
   font-size: clamp(1.5rem, 4.5vw, 3.5rem);
   text-align: center;
