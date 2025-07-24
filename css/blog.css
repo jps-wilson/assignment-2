@@ -190,10 +190,12 @@ html {
 }
 
 .image-row img {
-  flex: 1 1 300px; /* Grows, shrinks, and adds a base size */
-  max-width: 100%;
+  width: 100%; 
+  max-width: 300px;
   height: auto;
   object-fit: cover;
+  border-radius: 8px;
+  margin: 0.5rem;
 }
 
 
