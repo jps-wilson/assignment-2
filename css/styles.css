@@ -28,7 +28,6 @@ html {
 }
 
 /* Header and Nav Styling */
-
 .responsive-wrapper {
     width: 90%;
     max-width: 1280px;
@@ -68,8 +67,8 @@ html {
 /* Styling image in header bar */
 .header-logo img {
 	display: block;
-	height: calc(var(--header-inner-height) - 30px);
-    border-radius: 10px;
+	height: calc(var(--header-inner-height) - 2rem);
+  border-radius: 10px;
 }
 
 /* Styling the text in header bar for title */
@@ -92,7 +91,8 @@ html {
 }
 
 .header-navigation a {
-	font-size: 1.125rem;
+	display: none;
+  font-size: 1.125rem;
 	color: inherit;
   margin-left: 1.75rem;
 	text-decoration: none;
@@ -101,7 +101,6 @@ html {
   background: none;
   padding: 0.5em 0;
   border-radius: 4px;
-  /* transition: background 0.2s; */
 }
 
 .header-navigation button {
@@ -415,6 +414,10 @@ footer a {
     font-size: 1rem;
     
 }
+footer a:hover {
+  color: #ddd;
+  text-decoration: underline;
+}
 
 /* Beginning of Media Queries  */
 
@@ -442,11 +445,9 @@ footer a {
         max-width: 320px;
         z-index: 200;
     }
-
     #menu-toggle:checked + .menu-btn + .header-navigation {
       display: flex;
     }
-
     .menu-btn {
         display: inline-block;
         cursor: pointer;
@@ -458,7 +459,6 @@ footer a {
         font-weight: 500;
         position: relative;
     }
-
     .header-navigation a {
         width: 100%;
         padding: 0.75rem 1em;
