@@ -25,7 +25,6 @@ html {
 }
 
 /* Header and Nav Styling */
-
 .responsive-wrapper {
     width: 90%;
     max-width: 1280px;
@@ -47,7 +46,7 @@ html {
 }
 
 .header-inner {
-    /* Make it stick */
+    /* Makes it stick */
     position: relative;
     height: var(--header-inner-height);
     display: flex;
@@ -59,7 +58,7 @@ html {
 .header-logo {
     display: flex;
     align-items: center;
-    gap: 1rem; /* space between logo and h1 */
+    gap: 1rem; /* Adds space between logo and h1 */
 }
 
 /* Styling image in header bar */
@@ -127,7 +126,7 @@ html {
 }
 
 /* Styling for the hero banner  */
-.hero-section {
+/* .hero-section {
   background-image: url(../imgs/a-dash-ll-do-ya-banner.png);
   height: 60vh;
   width: 100%;
@@ -141,20 +140,18 @@ html {
   justify-content: center;
 }
 
-.hero-section .hero-section-text { /* This will need to be tweaked to work better */
+.hero-section .hero-section-text { *This will need to be tweaked to work better *
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -230%); /* Adjusts where the text in the hero banner is */
+  transform: translate(-50%, -230%); * Adjusts where the text in the hero banner is *
   color: #EAE6E0;
   font-size: clamp(1.5rem, 4.5vw, 3.5rem);
   text-align: center;
   padding: 1rem 2rem;
-  background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black */
-  box-shadow: 0 4px 8px rgba(72, 72, 72, 0.5); /* "Lifts" it off the image */
-
-  
-}
+  background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black *
+  box-shadow: 0 4px 8px rgba(72, 72, 72, 0.5); /* "Lifts" it off the image *
+} */
 
 /* Styling for the blog post */
 .blog-post {
@@ -185,14 +182,20 @@ html {
   color: #777;
 }
 
-.post-image img {
-  max-width: 400px;
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
-  margin-bottom: 1rem;
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
 }
+
+.image-row img {
+  flex: 1 1 300px; /* Grows, shrinks, and adds a base size */
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 
 .post-content {
   font-size: 1.3rem;
@@ -316,5 +319,12 @@ footer a {
     margin-left: 1.75rem;
     font-weight: 500;
     position: relative;
+  }
+}
+
+@media (max-width: 768px) {
+  .image-row {
+    flex-direction: column;
+    align-items: center;
   }
 }

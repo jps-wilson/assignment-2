@@ -341,7 +341,7 @@ body, html {
   justify-content: center;
 }
 
-/* Style the label to display next to the inputs */
+/* Style the label to display under the card blurb */
 label {
   padding: 12px 12px 12px 0;
   display: inline-block;
@@ -377,9 +377,7 @@ label {
 
 
 
-
-
-
+/* Styling the footer */
 footer {
   bottom: 0;
   left: 0;
@@ -412,7 +410,7 @@ footer a {
   }
 }
 
-
+/* Navigation bar media queries */
 
 @media (max-width: 800px) {
     .header-navigation {
@@ -460,7 +458,7 @@ footer a {
     }
 }
 
-/* Desktop styles: show links, hide menu button */
+/* Desktop styles: show links, hides menu button */
 @media (min-width: 801px) {
   .header-navigation a {
     display: inline-block;
