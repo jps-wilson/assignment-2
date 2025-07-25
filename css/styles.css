@@ -5,8 +5,8 @@
 }
 
 :root {
-    --header-outer-height: 110px;
-    --header-inner-height: 70px;
+    --header-outer-height: 6.875rem;
+    --header-inner-height: 4.375rem;
     --header-height-difference: calc(var(--header-outer-height) - var(--header-inner-height));
     --header-bg: #fff;
 }
@@ -25,12 +25,13 @@ html {
     box-sizing: border-box;
     height: 100%;
     scroll-behavior: smooth;
+    font-size: 100%;
 }
 
 /* Header and Nav Styling */
 .responsive-wrapper {
     width: 90%;
-    max-width: 1280px;
+    max-width: 80rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -45,7 +46,7 @@ html {
     align-items: center;
     /* Other */
     background-color: #fff;
-    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.125rem 0.625rem 0 rgba(0, 0, 0, 0.1);
 }
 
 .header-inner {
@@ -55,6 +56,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-right: 2rem;
 }
 
 /* Styling of other elements */
@@ -68,7 +70,7 @@ html {
 .header-logo img {
 	display: block;
 	height: calc(var(--header-inner-height) - 2rem);
-  border-radius: 10px;
+  border-radius: 0.625rem;
 }
 
 /* Styling the text in header bar for title */
@@ -100,7 +102,7 @@ html {
   font-weight: 500;
   background: none;
   padding: 0.5em 0;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .header-navigation button {
@@ -120,11 +122,11 @@ html {
 	content: "";
 	display: block;
 	width: 100%;
-	height: 2px;
+	height: 0.125rem;
 	background-color: currentcolor;
 	transform: scale(0);
 	position: absolute;
-	bottom: -2px;
+	bottom: -0.125rem;
 	left: 0;
 }
 
@@ -135,7 +137,7 @@ html {
 
 /* Styling the shape for the logo image */
 .blob {
-    width: clamp(100px, min(50dvh, 50dvw), 500px);
+    width: clamp(6.25rem, min(50dvh, 50dvw), 31.25rem);
     aspect-ratio: 1;
     border-radius: 100% 30% 60% 70% / 50% 40% 70% 70%;
     background-image: url('../imgs/Dark Mode.png');
@@ -149,9 +151,9 @@ html {
 
 .welcome {
 	width: 100%;
-	max-width: 900px;
-	border-radius: 8px;
-	box-shadow: 0 15px 30px 0 rgba(0,0,0, 0.1);
+	max-width: 56.25rem;
+	border-radius: 0.5rem;
+	box-shadow: 0 0.9375rem 1.875rem 0 rgba(0,0,0, 0.1);
 	background-color: #fff;
 	padding: 2.5rem;
 	margin-left: auto;
@@ -192,7 +194,6 @@ html {
     text-decoration: none;
     cursor: pointer;
     font-weight: 500;
-    /* transition: background 0.2s; */
     margin-top: 1.5rem;
     border: 0.3rem solid transparent;
     border-radius: 3rem;
@@ -201,7 +202,6 @@ html {
 }
 .about-button:hover, .meet-button:hover, .submit-btn:hover, .btn:hover {
     text-decoration: underline;
-    /* transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95); */
     transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0);
     
 }
@@ -262,7 +262,7 @@ html {
 /* Blog Post Cards */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(clamp(18.75rem, 20vh, 25rem), 1fr));
   gap: 2rem;
   padding: 1rem;
 }
@@ -280,16 +280,16 @@ html {
   justify-content: space-between;
   background: white;
   padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease; 
   height: 100%;
 }
 
 
 .card:hover {
-  transform: translate(10px, -10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  transform: translate(0.625rem, -0.625rem);
+  box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.08);
 }
 
 .card-image {
@@ -359,7 +359,7 @@ html {
 
 /* Style the label to display under the card blurb */
 label {
-  padding: 12px 12px 12px 0;
+  padding: 0.75rem 0.75rem 0.75rem 0;
   display: inline-block;
 }
 
@@ -367,20 +367,18 @@ label {
 /* Floating column for labels: 25% width */
 .col-25 {
   flex: 0 0 25%;
-  margin-top: 6px;
+  margin-top: 0.375rem;
 }
 
 /* Floating column for inputs: 75% width */
 .col-75 {
   flex: 0 0 75%;
-  margin-top: 6px;
+  margin-top: 0.375rem;
 }
 
-/* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
-  clear: both;
 }
 
 
@@ -438,13 +436,13 @@ footer a {
         align-items: flex-start;
         background: #fff;
         padding: 1rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        border-radius: 0.5rem;
+        box-shadow: 0 0.25rem 1rem rgba(0,0,0,0.08);
         position: absolute;
         top: 100%;
         left: 0;
         width: 80vw;
-        max-width: 320px;
+        max-width: 20rem;
         z-index: 200;
     }
 
@@ -468,7 +466,7 @@ footer a {
         width: 100%;
         padding: 0.75rem 1em;
         margin: 0.25em 0;
-        border-radius: 4px;
+        border-radius: 0.25rem;
         background: #f2f5f7;
         color: #222;
         font-size: 1.125rem;
@@ -499,7 +497,7 @@ footer a {
 
 @media (min-width: 900px) {
   .blob {
-    width: clamp(300px, min(70dvh, 70dvw), 900px);
+    width: clamp(18.75rem, min(70dvh, 70dvw), 56.25rem);
   }
 }
 
