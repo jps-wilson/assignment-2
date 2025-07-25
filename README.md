@@ -11,11 +11,11 @@ This is the official blog site for _A Dash’ll Do Ya_, a podcast created by des
 Visit the repository that contains my assignment 2\
 Follow the link for the live site
 
-### View the live site
+### Step 2: View the live site
 
  - [https://jps-wilson.github.io/assignment-2/index.html](https://jps-wilson.github.io/assignment-2/index.html)
 
-### Explore!
+### Step 3: Explore!
 
 The homepage will load with my blog layout:
 
@@ -29,10 +29,11 @@ The homepage will load with my blog layout:
 
 - Mobile menu toggle if you’re viewing on a smaller screen.
 
-### Optional - Mobile View:
+### Step 4: Optional - Mobile View:
 
 - To simulate a mobile device, open developer tools (Right-click → Inspect) and click the 📱 **Device Toggle Toolbar**
 - Resize the screen to see the responsive layout in action
+
 
 link for repo:  [https://github.com/jps-wilson/assignment-2](https://github.com/jps-wilson/assignment-2)
 
