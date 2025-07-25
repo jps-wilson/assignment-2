@@ -94,6 +94,7 @@ html {
   border-radius: 4px;
 }
 
+/* Hover underline animation */
 .header-navigation a:hover:after {
   transform: scale(1);
 }
@@ -111,7 +112,7 @@ html {
   left: 0;
 }
 
-/* Responsive Nav Toggle (MOBILE) */
+/* Mobile Menu Toggle Styles */
 @media (max-width: 800px) {
   .menu-btn {
     display: inline-block;
@@ -161,7 +162,7 @@ html {
   }
 }
 
-/* Desktop styles */
+/* Desktop Navigation */
 @media (min-width: 801px) {
   .header-navigation {
     display: flex;
@@ -178,6 +179,8 @@ html {
 }
 
 /* Blog layout */
+
+/* Main content and sidebar layout using css grid */
 .content-wrapper {
   display: grid;
   grid-template-columns: 1fr 3fr;
@@ -188,6 +191,7 @@ html {
   align-items: start;
 }
 
+/* Blog layout using Flexbox */
 .blog-layout {
   display: flex;
   flex-direction: row;
@@ -221,6 +225,7 @@ html {
   color: #777;
 }
 
+/* Row of images in blog posts */
 .image-row {
   display: flex;
   flex-wrap: wrap;
@@ -246,6 +251,7 @@ html {
   margin-bottom: 1.5rem;
 }
 
+/* Custom section headings */
 .host-name,
 .Why,
 .Know {
@@ -284,6 +290,7 @@ html {
   color: #333;
 }
 
+/* Sidebar tags styling */
 .sidebar .tags a {
   display: inline-block;
   background: #eaeaea;
@@ -325,13 +332,13 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Shared Hover */
+/* Shared hover effects for blog and sidebar links */
 .blog-post a:hover,
 .sidebar a:hover {
   text-decoration: underline;
 }
 
-/* Extra Mobile Layout Fixes */
+/* Mobile Layout Adjustments */
 @media (max-width: 768px) {
   .image-row {
     flex-direction: column;
