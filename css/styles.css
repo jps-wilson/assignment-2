@@ -1,16 +1,20 @@
+/* Importing Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 
+/* Reset box-sizing for all elements for easier sizing calcs */
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
+/* Created custom properties for header sizing and color */
 :root {
-    --header-outer-height: 110px;
-    --header-inner-height: 70px;
+    --header-outer-height: 6.875rem;
+    --header-inner-height: 4.375rem;
     --header-height-difference: calc(var(--header-outer-height) - var(--header-inner-height));
     --header-bg: #fff;
 }
 
+/* Base styles for body content */
 body {
   font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background-color: #f2f5f7;
@@ -21,58 +25,60 @@ body {
   flex-direction: column;
 }
 
+/* Base styles for html element */
 html {
     box-sizing: border-box;
     height: 100%;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Smooth scrolling on a links*/
+    font-size: 100%; /* Default font size */
 }
 
-/* Header and Nav Styling */
-
+/* Defines selector to constrain content and center it */
 .responsive-wrapper {
     width: 90%;
-    max-width: 1280px;
+    max-width: 80rem;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* Sticky header */
+/* Defines sticky header container with shadow */
 .header-outer {
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 100; /* Keeps header above other content */
     height: var(--header-outer-height);
     display: flex;
     align-items: center;
     /* Other */
     background-color: #fff;
-    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.125rem 0.625rem 0 rgba(0, 0, 0, 0.1);
 }
 
+/* Inner header container for layout and spacing */
 .header-inner {
-    /* Make it stick */
     position: relative;
     height: var(--header-inner-height);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-right: 2rem;
 }
 
-/* Styling of other elements */
+/* Styling of logo and heading elements */
 .header-logo {
     display: flex;
     align-items: center;
-    gap: 1rem; /* space between logo and h1 */
+    gap: 1rem; /* space between logo image and h1 */
 }
 
-/* Styling image in header bar */
+/* Styling logo image in header bar */
 .header-logo img {
 	display: block;
-	height: calc(var(--header-inner-height) - 30px);
-    border-radius: 10px;
+	height: calc(var(--header-inner-height) - 2rem);
+  border-radius: 0.625rem;
 }
 
-/* Styling the text in header bar for title */
+/* Styling links in header bar */
 .header-logo a {
     font-size: 2rem;
     font-weight: 700;
@@ -81,6 +87,7 @@ html {
     text-decoration: none;
 }
 
+/* Nav container */
 .header-navigation {
 	display: flex;
 	flex-wrap: wrap;
@@ -91,8 +98,10 @@ html {
   position: relative;
 }
 
+/* Navigation links - initially hidden on small screens */
 .header-navigation a {
-	font-size: 1.125rem;
+	display: none;
+  font-size: 1.125rem;
 	color: inherit;
   margin-left: 1.75rem;
 	text-decoration: none;
@@ -100,16 +109,17 @@ html {
   font-weight: 500;
   background: none;
   padding: 0.5em 0;
-  border-radius: 4px;
-  /* transition: background 0.2s; */
+  border-radius: 0.25rem;
 }
 
+/* Navigation button styling */
 .header-navigation button {
 	border: 0;
 	background-color: transparent;
 	padding: 0;
 }
 
+/* Underline animation on hover for nav links and button */
 .header-navigation a:hover:after,
 .header-navigation button:hover:after {
 	transform: scale(1);
@@ -121,14 +131,15 @@ html {
 	content: "";
 	display: block;
 	width: 100%;
-	height: 2px;
+	height: 0.125rem; /* Adds thin underline */
 	background-color: currentcolor;
 	transform: scale(0);
 	position: absolute;
-	bottom: -2px;
+	bottom: -0.125rem;
 	left: 0;
 }
 
+/* Main content margin and flex grow */
 .main {
 	margin-top: 4rem;
   flex: 1;
@@ -136,7 +147,7 @@ html {
 
 /* Styling the shape for the logo image */
 .blob {
-    width: clamp(100px, min(50dvh, 50dvw), 500px);
+    width: clamp(6.25rem, min(50dvh, 50dvw), 31.25rem); /* Clamp used for responsive sizing */
     aspect-ratio: 1;
     border-radius: 100% 30% 60% 70% / 50% 40% 70% 70%;
     background-image: url('../imgs/Dark Mode.png');
@@ -147,12 +158,12 @@ html {
     height: auto;
   }
   
-
+/* Styling for welcome section */
 .welcome {
 	width: 100%;
-	max-width: 900px;
-	border-radius: 8px;
-	box-shadow: 0 15px 30px 0 rgba(0,0,0, 0.1);
+	max-width: 56.25rem;
+	border-radius: 0.5rem;
+	box-shadow: 0 0.9375rem 1.875rem 0 rgba(0,0,0, 0.1);
 	background-color: #fff;
 	padding: 2.5rem;
 	margin-left: auto;
@@ -164,11 +175,13 @@ html {
   gap: 2rem;
 }
 
+/* Intro tag styling */
 .intro-tag {
 	font-weight: 700;
 	line-height: 1.25;
 }
 
+/* Headings inside welcome section styles */
 .welcome h1 {
 	font-size: 2.5rem;
 	font-weight: 700;
@@ -183,6 +196,7 @@ html {
   text-align: left;
 }
 
+/* Styling for buttons */
 .about-button, .meet-button, .submit-btn {
     display: inline-block;
     padding: 0.75em 1.5em;
@@ -193,21 +207,19 @@ html {
     text-decoration: none;
     cursor: pointer;
     font-weight: 500;
-    /* transition: background 0.2s; */
     margin-top: 1.5rem;
     border: 0.3rem solid transparent;
-    border-radius: 3rem;
-    
-    
-}
-.about-button:hover, .meet-button:hover, .submit-btn:hover, .btn:hover {
-    background: #A88274;
-    text-decoration: underline;
-    /* transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95); */
-    transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0);
-    
+    border-radius: 3rem;  
 }
 
+/* Hover effect for buttons */
+.about-button:hover, .meet-button:hover, .submit-btn:hover, .btn:hover {
+    text-decoration: underline;
+    transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0); /* Makes button grow on hover */
+    background-color: #A88274; /* Changes button color on hover */
+}
+
+/* Link styling inside buttons */
 .about-button a,
 .meet-button a,
 .button a {
@@ -217,37 +229,7 @@ html {
     transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
 }
 
-.about-button::after,
-.meet-button::after,
-.submit-btn::after {
-    display: inline-block;
-    margin-left: 0.5em;
-    transition: opacity 0.2s, transform 0.2s;
-    opacity: 0;
-    transform: rotate(-45deg) scale(0.8) translateX(-5px);
-    /* Arrow style */
-    border: solid #222;
-    border-width: 0 3px 3px 0;
-    padding: 3px;
-    
-}
-
-.about-button:hover::after,
-.meet-button:hover::after,
-.submit-btn:hover::after {
-    opacity: 1;
-    transform: rotate(-45deg) scale(1) translateX(0);
-}
-
-.header-navigation a:focus,
-.about-button:focus,
-.meet-button:focus,
-.submit-btn:focus {
-  outline: 2px solid #A88274;
-  outline-offset: 2px;
-}
-
-/* Why You Should Listen Content */
+/* Center text for "Why You Should Listen" section */
 .why-you-should-listen h2, .why-you-should-listen p {
     text-align: center;
 }
@@ -261,7 +243,7 @@ html {
     margin-top: 4rem;
 }
 
-/* Dive Deeper Content */
+/* Center text for "Dive Deeper" section */
 .dive-deeper h2 {
   text-align: center;
   margin-bottom: 1rem;
@@ -272,56 +254,70 @@ html {
     margin-top: 4rem;
 }
 
-/* Blog Post Cards */
+/* Blog post cards container - uses css grid */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(clamp(18.75rem, 20vh, 25rem), 1fr));
   gap: 2rem;
   padding: 1rem;
 }
 
+/* Card animation on scroll */
+.card {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0;
+}
+
+/* Base styles for blog post cards */
 .card {
 	display: flex;
   flex-direction: column;
   justify-content: space-between;
   background: white;
   padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease; 
   height: 100%;
 }
 
+/* Card hover effect */
 .card:hover {
-  transform: translate(10px, -10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  transform: translate(0.625rem, -0.625rem); /* Moves card up and to right */
+  box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.08); /* Adds shadow to make it look like card is moving up */
 }
 
+/* Card image container */
 .card-image {
   width: 100%;
-  height: 200px;
+  height: 12.5rem;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 0.5rem;
 }
 
+/* Card image styling */
 .card-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Makes the image fill the box nicely */
+  object-fit: cover; /* Makes image fill entire container */
 }
 
+/* Blog title inside card styling */
 .blog-title {
   margin: auto;
   padding: 0.5em;
   font-size: 2rem;
   text-decoration: underline;
 }
+
+/* Styling for paragraph text in card */
 .card p {
   color:#373737;
   font-size: 0.875rem;
 }
 
-
+/* General button styling */
 .btn {
     display: inline-block;
     padding: 0.75em 1.5em;
@@ -336,62 +332,60 @@ html {
     border-radius: 3rem;
     border: 0.3rem solid transparent;
     margin-top: 1.5rem;
-    
 }
 
+/* Button hover effect */
 .btn:hover {
-  background: #A88274;
   transform: scale3d(1.044, 1.044, 1);
 }
 
-/* Form Styling */
+/* Contact form Styling */
 .contact-form {
     margin-top: 4rem;
     min-height: 100vh;
 }
 
+/* Contact form headings centered */
 .contact-form h5, .contact-form h2 {
     text-align: center;
 }
 
+/* Adds spacing below contact form heading */
 .contact-form h2 {
   margin-bottom: 1rem;
 }
 
+/* Container for contact form input fields */
 .contact-us-form {
   display: flex;
   justify-content: center;
 }
 
-/* Style the label to display under the card blurb */
+/* Styles label to display under card blurb */
 label {
-  padding: 12px 12px 12px 0;
+  padding: 0.75rem 0.75rem 0.75rem 0;
   display: inline-block;
 }
 
 
-/* Floating column for labels: 25% width */
+/* Label column width */
 .col-25 {
   flex: 0 0 25%;
-  margin-top: 6px;
+  margin-top: 0.375rem;
 }
 
-/* Floating column for inputs: 75% width */
+/* Input column width */
 .col-75 {
   flex: 0 0 75%;
-  margin-top: 6px;
+  margin-top: 0.375rem;
 }
 
-/* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
-  clear: both;
 }
 
-
-
-/* Styling the footer */
+/* Styling footer */
 footer {
   bottom: 0;
   left: 0;
@@ -402,6 +396,7 @@ footer {
   padding: 1.5rem;
 }
 
+/* Footer navigation links container */
 .footer-links {
     display: flex;
     justify-content: center;
@@ -409,6 +404,7 @@ footer {
     margin-top: 0.5rem;
 }
 
+/* Footer link styling */
 footer a {
     color: #fff;
     text-decoration: none;
@@ -416,48 +412,48 @@ footer a {
     
 }
 
-/* Media Queries for Blog Posts */
+/* Animation for card appearance */
+@keyframes appear { /* ==Not supported in Firefox yet== */
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
 
+/* Responsive grid for blog posts on small screens */
 @media (max-width: 600px) {
   .grid-container {
     grid-template-columns: 1fr;
   }
 }
 
-/* Navigation bar media queries */
-
+/* Navigation bar responsive styles for small screens */
 @media (max-width: 800px) {
     .header-navigation {
+        display: none;
         flex-direction: column;
         align-items: flex-start;
         background: #fff;
         padding: 1rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        border-radius: 0.5rem;
+        box-shadow: 0 0.25rem 1rem rgba(0,0,0,0.08);
         position: absolute;
         top: 100%;
         left: 0;
         width: 80vw;
-        max-width: 320px;
+        max-width: 20rem;
         z-index: 200;
     }
 
-
-    .header-navigation a {
-        width: 100%;
-        padding: 0.75rem 1em;
-        margin: 0.25em 0;
-        border-radius: 4px;
-        background: #f2f5f7;
-        color: #222;
-        font-size: 1.125rem;
-        box-shadow: none;
-        text-align: left;
-        /* transition: background 0.2s; */
+    /* Show navigation menu when user taps on menu */
+    #menu-toggle:checked + .menu-btn + .header-navigation {
+      display: flex;
     }
-    #menu-toggle:checked ~ a {
-        display: block;
-    }
+    /* Menu button styling */
     .menu-btn {
         display: inline-block;
         cursor: pointer;
@@ -469,9 +465,22 @@ footer a {
         font-weight: 500;
         position: relative;
     }
+
+    /* Navigation links styling for small screens */
+    .header-navigation a {
+        width: 100%;
+        padding: 0.75rem 1em;
+        margin: 0.25em 0;
+        border-radius: 0.25rem;
+        background: #f2f5f7;
+        color: #222;
+        font-size: 1.125rem;
+        box-shadow: none;
+        text-align: left;
+    }
 }
 
-/* Desktop styles: show links, hides menu button */
+/* Desktop styles: show nav links and hide menu button */
 @media (min-width: 801px) {
   .header-navigation a {
     display: inline-block;
@@ -481,6 +490,7 @@ footer a {
   }
 }
 
+/* Responsive welcome section for small screens */
 @media (max-width: 700px) {
     .welcome {
         flex-direction: column;
@@ -490,10 +500,10 @@ footer a {
         margin-bottom: 2rem;
     }
 }
-
+/* Blob size adjustment on large screens */
 @media (min-width: 900px) {
   .blob {
-    width: clamp(300px, min(70dvh, 70dvw), 900px);
+    width: clamp(18.75rem, min(70dvh, 70dvw), 56.25rem);
   }
 }
 

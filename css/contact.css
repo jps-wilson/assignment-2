@@ -7,13 +7,10 @@
 }
 
 :root {
-    --header-outer-height: 110px;
-    --header-inner-height: 70px;
-    --header-height-difference: calc(
-        var(var(--header-outer-height) - var(--header-inner-height)
-        );
+    --header-outer-height: 6.875rem;
+    --header-inner-height: 4.375rem;
+    --header-height-difference: calc(var(--header-outer-height) - var(--header-inner-height));
     --header-bg: #fff;
-    )
 }
 
 html {
@@ -22,13 +19,14 @@ html {
     line-height: 1.5;
     min-height: 100vh;
     position: relative;
+    font-size: 16px; /* This is what the rem is based on */
+    scroll-behavior: smooth;
 }
 
 /* Header and Nav Styling */
-
 .responsive-wrapper {
     width: 90%;
-    max-width: 1280px;
+    max-width: 80rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -41,9 +39,8 @@ html {
     height: var(--header-outer-height);
     display: flex;
     align-items: center;
-    /* Other */
     background-color: #fff;
-    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
 }
 
 .header-inner {
@@ -53,6 +50,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-right: 2rem;
 }
 
 /* Styling of other elements */
@@ -65,8 +63,8 @@ html {
 /* Styling image in header bar */
 .header-logo img {
 	display: block;
-	height: calc(var(--header-inner-height) - 30px);
-  border-radius: 10px;
+	height: calc(var(--header-inner-height) - 1.875rem);
+  border-radius: 0.625rem;
 }
 
 /* Styling the text in header bar for title */
@@ -97,7 +95,7 @@ html {
   font-weight: 500;
   background: none;
   padding: 0.5em 0;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   transition: background 0.2s;
 }
 
@@ -118,11 +116,11 @@ html {
 	content: "";
 	display: block;
 	width: 100%;
-	height: 2px;
+	height: 0.125rem;
 	background-color: currentcolor;
 	transform: scale(0);
 	position: absolute;
-	bottom: -2px;
+	bottom: -0.125rem;
 	left: 0;
 }
 
@@ -151,7 +149,7 @@ html {
   text-align: center;
   padding: 1rem 2rem;
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-  box-shadow: 0 4px 8px rgba(72, 72, 72, 0.9); /* "Lifts" it off the image */
+  box-shadow: 0 0.25rem 0.5rem rgba(72, 72, 72, 0.9); /* "Lifts" it off the image */
 
   
 }
@@ -178,15 +176,19 @@ footer a {
     
 }
 
+footer a:hover {
+  text-decoration: underline;
+}
+
 /* Media Queries */
-@media (max-width: 800px) {
+@media (max-width: 50rem) {
     .header-navigation {
         flex-direction: column;
         align-items: flex-start;
         background: #fff;
         padding: 1rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        border-radius: 0.5rem;
+        box-shadow: 0 0.25rem 1rem rgba(0,0,0,0.08);
         position: absolute;
         top: 100%;
         left: 0;
@@ -199,9 +201,9 @@ footer a {
     .header-navigation a {
         display: none;
         width: 100%;
-        padding: 0.75rem 1em;
+        padding: 0.75rem 1rem;
         margin: 0.25em 0;
-        border-radius: 4px;
+        border-radius: 0.25rem;
         background: #f2f5f7;
         color: #222;
         font-size: 1.125rem;
@@ -226,7 +228,7 @@ footer a {
 }
 
 /* Desktop styles: show links, hide menu button */
-@media (min-width: 801px) {
+@media (min-width: 50.063rem) {
   .header-navigation a {
     display: inline-block;
   }
@@ -236,32 +238,3 @@ footer a {
 }
 
 /* Mobile styles: hide links, show menu button */
-@media (max-width: 800px) {
-  .header-navigation a {
-    display: none;
-    width: 100%;
-    padding: 0.75rem 1em;
-    margin: 0.25em 0;
-    border-radius: 4px;
-    background: #f2f5f7;
-    color: #222;
-    font-size: 1.125rem;
-    box-shadow: none;
-    text-align: left;
-    transition: background 0.2s;
-  }
-  #menu-toggle:checked ~ a {
-    display: block;
-  }
-  .menu-btn {
-    display: inline-block;
-    cursor: pointer;
-    font-size: 1.125rem;
-    background: none;
-    border: none;
-    color: inherit;
-    margin-left: 1.75rem;
-    font-weight: 500;
-    position: relative;
-  }
-}
