@@ -6,35 +6,33 @@ This is the official blog site for _A Dash’ll Do Ya_, a podcast created by des
 
 ## Viewing Instructions
 
-<Holocron.Steps cols={2}>
-    ### Step 1: Go to the GitHub repo
+### Step 1: Go to the GitHub repo
 
-    Visit the repository that contains my assignment 2\
-    Follow the link for the live site
+Visit the repository that contains my assignment 2\
+Follow the link for the live site
 
-    ### View the live site
+### View the live site
 
-    - [https://jps-wilson.github.io/assignment-2/index.html](https://jps-wilson.github.io/assignment-2/index.html)
+ - [https://jps-wilson.github.io/assignment-2/index.html](https://jps-wilson.github.io/assignment-2/index.html)
 
-    ### Explore!
+### Explore!
 
-    The homepage will load with my blog layout:
+The homepage will load with my blog layout:
 
-    - A sticky header with logo and site name.
+- A sticky header with logo and site name.
 
-    - Blog post cards with responsive design.
+- Blog post cards with responsive design.
 
-    - Sidebar with links and tags.
+- Sidebar with links and tags.
 
-    - Footer with navigation links.
+- Footer with navigation links.
 
-    - Mobile menu toggle if you’re viewing on a smaller screen.
+- Mobile menu toggle if you’re viewing on a smaller screen.
 
-    ### Optional - Mobile View:
+### Optional - Mobile View:
 
-    - To simulate a mobile device, open developer tools (Right-click → Inspect) and click the 📱 **Device Toggle Toolbar**
-    - Resize the screen to see the responsive layout in action
-</Holocron.Steps>
+- To simulate a mobile device, open developer tools (Right-click → Inspect) and click the 📱 **Device Toggle Toolbar**
+- Resize the screen to see the responsive layout in action
 
 link for repo:  [https://github.com/jps-wilson/assignment-2](https://github.com/jps-wilson/assignment-2)
 
