@@ -326,7 +326,6 @@ footer a:hover {
 }
 
 /* Shared Hover */
-a:hover,
 .blog-post a:hover,
 .sidebar a:hover {
   text-decoration: underline;
